@@ -1,3 +1,5 @@
+// SOLUTION for running github projects
+// https://github.com/libgdx/libgdx/wiki/Gradle-and-Intellij-IDEA Run -> Edit Configurations and put SDK on JRE.
 // What we get with frameworks:
 // WEB SERVER - Frameworks either embed or integrate with specific web server. This is what handles the actual communication over HTTP.
 // It makes sure it can handle many requests at once and serve many clients
