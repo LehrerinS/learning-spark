@@ -1,0 +1,26 @@
+{{#partial "content"}}
+    <h1>Current Ideas</h1>
+
+    {{! we passed in the list of course ideas in ModelAndView from main
+    and there is block helper each. and it works with items and it push title, instead of using getTitle() there is some magic here to use only title}}
+    <!--ul stays for undefined list and we use it for listing
+    each is similar like looping through all ideas and giving one idea-->
+    <ul>
+        {{#each ideas}}
+            <li>
+                <form action="/ideas/{{ slug }}/vote" method="post">
+                    <a href="/ideas/{{ slug }}">{{ title }}</a> ( {{voteCount}} votes) <button>Vote</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    {{! now let's add post method on ideas page}}
+    <form action="/ideas" method="post">
+        <input type="text" placeholder="What's your idea?" name="title">
+        <button>Suggest!</button>
+    </form>
+
+{{/partial}}
+
+{{> base.hbs}}

@@ -1,0 +1,25 @@
+<!--block and partial helpers work together to provide you template inheritance!!!!!
+Partial overrides block from base with the same name-->
+{{#block "header"}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{#block "title"}}Welcome to Course Ideas{{/block}}</title>
+    <link rel="stylesheet" href="/css/main.css" class="css">
+</head>
+<body>
+<!--this div somehow we use to apply css content-->
+    <div class="page">
+    {{#if flashMessage}}
+        <p id="flash-message">{{ flashMessage }}</p>
+    {{/if}}
+{{/block}}
+
+{{#block "content"}}{{/block}}
+
+{{#block "footer"}}
+    </div>
+    </body>
+    </html>
+{{/block}}

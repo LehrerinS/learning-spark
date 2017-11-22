@@ -1,0 +1,12 @@
+{{!and here we override title from base to sign in specific}}
+<!--block and partial helpers work together to provide you template inheritance!!!!!
+Partial overrides block from base with the same name-->
+{{#partial "title"}}Signed in!!!!!{{/partial}}
+
+{{#partial "content"}}
+    <!--this username is known from model somehow-->
+    <p>Welcome {{ username }}! </p>
+{{/partial}}
+
+{{!we inherite here from base.hbs. this is in order not to have too much boil plate code}}
+{{> base.hbs}}
