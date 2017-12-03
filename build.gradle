@@ -3,14 +3,14 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.5
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
 //    compile 'groupId:artifactId:version'
 //    // https://mvnrepository.com/artifact/com.sparkjava/spark-core
 //    compile group: 'com.sparkjava', name: 'spark-core', version: '2.7.1'
@@ -20,4 +20,5 @@ dependencies {
 //    here also we need to add plugin for handlebars from File/Settings/Plugins/ and then we search for Handlebar/Mustache plugin and we install it and restart idea
 //    the reason why we need plugin is in order for java to be able to recognize html syntax
 //    also according to the documentation handlebars hbs files should be in resources
+    compile group: 'com.github.slugify', name: 'slugify', version: '2.1.4'
 }
