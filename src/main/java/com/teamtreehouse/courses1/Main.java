@@ -65,7 +65,7 @@ public class Main {
             return null;
         });
 
-//      this example is from here https://github.com/perwendel/spark-template-engines/tree/master/spark-template-handlebars. That is how you handle with new stuff
+//      this example is from here https://gith  ub.com/perwendel/spark-template-engines/tree/master/spark-template-handlebars. That is how you handle with new stuff
 //      so this means when something comes in matching the path / run this route which at this moment builds a new model and view object and only has a view portion,
 //      our template name which exist in resources/templates directory and it renders it using HandlebarsTemplateEngine
         get("/", (req, res) -> {
@@ -124,6 +124,8 @@ public class Main {
 
 //        on ideas.hbs this one is for posting votes
         post("/ideas/:slug/vote", (req, res) -> {
+//            https://stackoverflow.com/questions/11552248/when-to-use-queryparam-vs-pathparam
+//            here we use path param slug and not query param!!!!!
             CourseIdea idea = dao.findBySlug(req.params("slug"));
             boolean added = idea.addVoter(req.attribute("username"));
             if (added) {

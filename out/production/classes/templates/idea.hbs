@@ -6,7 +6,8 @@ Partial overrides block from base with the same name-->
     <h2>{{ idea.voteCount }} Voters</h2>
     <ul>
         {{#each idea.voters}}
-            <!--this is here username of the voter and it will display all of them from the array-->
+            <!--this is here username of the voter and it will display all of them from the array.
+            it is used like that isnce the voter is just a string and not the object then we have to access as this-->
             <li>{{ this }}</li>
         {{/each}}
     </ul>

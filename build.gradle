@@ -2,8 +2,9 @@ group 'com.teamtreehouse.courses1'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -22,3 +23,10 @@ dependencies {
 //    also according to the documentation handlebars hbs files should be in resources
     compile group: 'com.github.slugify', name: 'slugify', version: '2.1.4'
 }
+
+
+// https://stackoverflow.com/questions/24924932/gradle-could-not-find-or-load-main-class
+// for running from gradle it was important to add this main class with full location, check the example from above
+// and also it was important to specify source as java 8 (sourceCompatibility = 1.8)
+// and also it was important to say apply plugin java and application
+mainClassName = 'com.teamtreehouse.courses1.Main'
